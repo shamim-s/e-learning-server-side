@@ -28,8 +28,8 @@ app.get('/courses/:id', (req, res) => {
 // 3. It just a duplicate api like number 2 for checkout page 
 app.get('/checkout/:id', (req, res) => {
     const id = req.params.id;
-    const item= courses.find( course => course.id === id);
-    res.send(item);
+    const course= courses.find( course => course.id === id);
+    res.send(course);
 })
 
 app.listen(port, () => {
