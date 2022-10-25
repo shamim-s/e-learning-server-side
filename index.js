@@ -22,6 +22,12 @@ app.get('/courses/:id', (req, res) => {
     res.send(course);
 })
 
+app.get('/checkout/:id', (req, res) => {
+    const id = req.params.id;
+    const item= courses.find( course => course.id === id);
+    res.send(item);
+})
+
 app.listen(port, () => {
     console.log(`E_TUTOR SERVER RUNNING ON PORT ${port}`);
 })
